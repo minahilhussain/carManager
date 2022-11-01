@@ -13,6 +13,7 @@ export class CarService {
   public async getAllCars(): Promise<Car[]> {
     return this.carsRepository.find();
   }
+
   public async getCarById(uuid: string): Promise<Car> {
     const car = this.carsRepository.findOneBy({ uuid });
     if (!car) throw new Error('Car not found');
@@ -22,9 +23,11 @@ export class CarService {
   public async deleteCarById(uuid: string): Promise<void> {
     await this.carsRepository.delete(uuid);
   }
-  public async postCar(car: Car): Promise<Car> {
+
+  public async postCar(car: Partial<Car>): Promise<Car> {
     return this.carsRepository.save(car);
   }
+
   public async putCarById(car: Car) {
     const myCar = await this.getCarById(car.uuid);
     if (!myCar) throw new Error('Car not found');
