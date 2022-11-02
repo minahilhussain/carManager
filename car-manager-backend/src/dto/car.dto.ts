@@ -4,7 +4,7 @@ export class CreateCarDTO {
   color: string;
 }
 export class UpdateCarDTO {
-  name: string;
-  model: string;
-  color: string;
+  name?: string;
+  model?: string;
+  color?: string;
 }

@@ -28,8 +28,8 @@ export class CarService {
     return this.carsRepository.save(car);
   }
 
-  public async putCarById(car: Car) {
-    const myCar = await this.getCarById(car.uuid);
+  public async putCarById(uuid: string, car: Partial<Car>) {
+    const myCar = await this.getCarById(uuid);
     if (!myCar) throw new Error('Car not found');
     myCar.name = car.name;
     myCar.model = car.model;
