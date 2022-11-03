@@ -6,8 +6,10 @@ import {
   Param,
   Post,
   Put,
+  Query,
 } from '@nestjs/common';
 import { CreateCarDTO, UpdateCarDTO } from 'src/dto/car.dto';
+import { Car } from 'src/entity/Car';
 import { CarService } from './car.service';
 
 @Controller('car')
@@ -15,11 +17,16 @@ export class CarController {
   constructor(private carService: CarService) {}
 
   @Get()
-  async getCars() {
+  async getCarByColor(@Query('color') color) {
+    console.log(color);
+    return this.carService.getCarByColor(color);
+  }
+  @Get()
+  async getCars(): Promise<Car[]> {
     return this.carService.getAllCars();
   }
   @Get(':id')
-  async getOneCar(@Param('id') uuid: string) {
+  async getOneCar(@Param('id') uuid: string): Promise<Car> {
     return this.carService.getCarById(uuid);
   }
   @Post()

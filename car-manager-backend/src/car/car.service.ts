@@ -36,4 +36,9 @@ export class CarService {
     myCar.color = car.color;
     return this.carsRepository.save(myCar);
   }
+
+  public async getCarByColor(color: string): Promise<Car[]> {
+    const cars = this.carsRepository.find({ where: { color } });
+    return cars;
+  }
 }
