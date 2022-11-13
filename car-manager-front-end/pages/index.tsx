@@ -1,10 +1,10 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Layout.module.css'
-import ArticleList from "../components/ArticleList"
+import CarsList from "../components/CarsList"
 
-export default function Home({articles}) {
-  console.log("articles", articles);
+export default function Home({cars}) {
+  console.log("cars", cars);
   return (
     <div>
       <Head>
@@ -14,16 +14,16 @@ export default function Home({articles}) {
       </Head>
 
       <h1>hello world</h1>
-      <ArticleList articles={articles} />
+      <CarsList cars={cars} />
     </div>
   )
 }
 export const getStaticProps = async () => {
-  const res = await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=6`);
-  const articles = await res.json();
+  const res = await fetch(`${process.env.HOST}/car`);
+  const cars = await res.json();
   return {
     props: {
-      articles
+      cars
     }
   }
 
