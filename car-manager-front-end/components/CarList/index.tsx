@@ -1,5 +1,5 @@
 import React from 'react'
-import CarItem from './CarItem'
+import CarItem from '../CarItem'
 
 const CarsList = ({cars}) => {
   return (

@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import CarsList from "../components/CarsList"
+import CarsList from "../components/CarList"
 
 export default function Home({cars}) {
   return (
