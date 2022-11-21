@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <div className={styles.header}>
       <h1>Welcome to Car Manager</h1>
-    <Img imgUrl={headerImage}/>
+      <Img imgUrl={headerImage}/>
     </div>
   )
 }

@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import CarsList from "../components/CarList"
 import Header from '../components/Header';
+import AllCars from "../components/AllCars"
 
 export default function Home({cars}) {
   return (
@@ -11,7 +12,7 @@ export default function Home({cars}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header/>
-      <CarsList cars={cars} />
+      <AllCars cars={cars}/>
     </div>
   )
 }
