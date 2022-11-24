@@ -4,6 +4,7 @@ import CarsList from "../CarList"
 const AllCars = ({cars}) => {
   return (
     <div className ={styles.allCars}>
+      <h1>Available Cars</h1>
       <div>
         <CarsList cars={cars} />
       </div>
