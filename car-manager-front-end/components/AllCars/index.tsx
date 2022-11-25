@@ -5,20 +5,9 @@ const AllCars = ({cars}) => {
   return (
     <div className ={styles.allCars}>
       <h1>Available Cars</h1>
-      <div>
+      <div className={styles.container}>
         <CarsList cars={cars} />
       </div>
-      <div>
-        <p>hgesgfhjegfhdsvcgh vshcsghdcghd</p>
-        <p>hgesgfhjegfhdsvcgh vshcsghdcghd</p>
-        <p>hgesgfhjegfhdsvcgh vshcsghdcghd</p>
-        <p>hgesgfhjegfhdsvcgh vshcsghdcghd</p>
-        <p>hgesgfhjegfhdsvcgh vshcsghdcghd</p>
-        <p>hgesgfhjegfhdsvcgh vshcsghdcghd</p>
-        <p>hgesgfhjegfhdsvcgh vshcsghdcghd</p>
-
-      </div>
-
     </div>
   )
 }

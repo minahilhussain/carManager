@@ -1,16 +1,11 @@
 .allCars {
   background-color: #000;
 }
-.wrapper {
-  display:flex;
-  margin:0 auto;
-  width:80%;
-  background-color: #000;
-  box-shadow:0 0 3em #fff;
-  margin-bottom: 2rem;
-}
-
 .allCars h1 {
   color: #9f9f9f;
   text-align: center;
+}
+.allCars .container {
+  height: 100vh;
+  overflow: scroll;
 }
