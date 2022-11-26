@@ -18,7 +18,6 @@ export class CarController {
 
   @Get()
   async getCarByColor(@Query('color') color) {
-    console.log(color);
     return this.carService.getCarByColor(color);
   }
   @Get()

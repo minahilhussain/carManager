@@ -13,4 +13,7 @@ export class Car {
 
   @Column({ default: '' })
   color: string;
+
+  @Column({ default: '' })
+  description: string;
 }

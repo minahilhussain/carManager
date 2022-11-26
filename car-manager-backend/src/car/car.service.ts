@@ -34,6 +34,8 @@ export class CarService {
     myCar.name = car.name;
     myCar.model = car.model;
     myCar.color = car.color;
+    myCar.description = car.description;
+
     return this.carsRepository.save(myCar);
   }
 
