@@ -1,14 +1,13 @@
 import React from 'react'
-import styles from "./Header.module.css"
-import headerImage from '../../images/carHeader.jpeg'
-import Img from '../Img'
+import Hero from '../Hero'
+import NavBar from '../NavBar'
 
 const Header = () => {
   return (
-    <div className={styles.header}>
-      <h1>Welcome to Car Manager</h1>
-      <Img imgUrl={headerImage}/>
-    </div>
+    <>
+      <NavBar />
+      <Hero />
+    </>
   )
 }
 
