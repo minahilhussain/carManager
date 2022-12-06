@@ -1,12 +1,14 @@
+import Link from 'next/link'
 import React from 'react'
+import CarDetail from '../CarDetail'
 import styles from "./CarItem.module.css"
 
 const CarItem = ({car}) => {
   return (
-    <div key = {car.id} className={styles.wrapper}>
-      <h4>{car.name}</h4>
-      <p>{car.model}</p>
-      <p>{car.color}</p>
+    <div key = {car.uuid} className={styles.wrapper}>
+     <Link href='/car/[id]' as={`/car/${car.uuid}`}>
+        <CarDetail car={car}/>
+      </Link>
     </div>
   )
 }

@@ -5,5 +5,8 @@
   background-color: #000;
   box-shadow:0 0 3em #fff;
   margin-bottom: 2rem;
-  color: red;
+  color: #9f9f9f;
+  flex-direction: column;
+  padding-left: 10px;
+  border-radius: 5px;
 }
