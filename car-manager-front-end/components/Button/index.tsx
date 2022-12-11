@@ -1,19 +1,18 @@
-import Link from 'next/link'
-import React from 'react'
-import styles from "./Button.module.css"
+import Link from 'next/link';
+import React from 'react';
+import styles from './Button.module.css';
 
 interface ButtonProps {
   label: string;
-  link: string;
-  uuid: string;
+  onClick: Function;
+  param?: string;
 }
-const Button = ({label, link, uuid }: ButtonProps) => {
+const Button = ({ label, onClick, param }: ButtonProps) => {
   return (
-    <Link href={`${link}[id]`} as={`${link}${uuid}`}>
-      <span className={styles.button}>{label}</span>
-    </Link> 
-  )
-}
+    <span onClick={() => onClick(param)} className={styles.button}>
+      {label}
+    </span>
+  );
+};
 
-
-export default Button
+export default Button;
