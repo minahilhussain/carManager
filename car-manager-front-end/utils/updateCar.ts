@@ -3,7 +3,7 @@ import swal from 'sweetalert';
 import { Car } from '../types/Car';
 
 export const updateCar = async (car: Car) => {
-  await fetch(`http://localhost:5000/car/${car.uuid}`, {
+  await fetch(`${process.env.NEXT_PUBLIC_HOST}/car/${car.uuid}`, {
     method: 'PUT',
     headers: {
       Accept: 'aplication/json',
