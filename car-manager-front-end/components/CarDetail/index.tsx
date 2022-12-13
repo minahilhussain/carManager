@@ -1,7 +1,7 @@
-import Link from 'next/link'
-import React from 'react'
+import React from 'react';
+import { carProps } from '../../types/Car';
 
-const CarDetail = ({car}) => {
+const CarDetail = ({ car }: carProps) => {
   return (
     <>
       <h4>{car.name}</h4>
@@ -9,7 +9,7 @@ const CarDetail = ({car}) => {
       <p>{car.color}</p>
       <p>{car.description}</p>
     </>
-  )
-}
+  );
+};
 
-export default CarDetail
+export default CarDetail;
