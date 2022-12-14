@@ -1,7 +1,16 @@
-export default class Car {
-  uuid!: String;
-  name?: String;
-  model?: String;
-  color?: String;
-  description?: String;
+export class Car {
+  uuid!: string;
+  name?: string;
+  model?: string;
+  color?: string;
+  description?: string;
+}
+export class SaveCar {
+  name!: string;
+  model!: string;
+  color!: string;
+  description!: string;
+}
+export interface carProps {
+  car: Car;
 }
