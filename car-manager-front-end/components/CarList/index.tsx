@@ -1,14 +1,15 @@
-import React from 'react'
-import CarItem from '../CarItem'
+import React from 'react';
+import { Car, carProps } from '../../types/Car';
+import CarItem from '../CarItem';
 
-const CarsList = ({cars}) => {
+const CarsList = ({ car }: carProps) => {
   return (
     <div>
-      {cars.map((car) => (
-        <CarItem car={car} key={car.uuid}></CarItem>
+      {car.map((c: Car) => (
+        <CarItem car={c} key={c.uuid}></CarItem>
       ))}
     </div>
-  )
-}
+  );
+};
 
-export default CarsList
+export default CarsList;
