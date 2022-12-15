@@ -15,10 +15,6 @@ export default function Home({ cars }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <h1>
-        hola {process.env.NEXT_PUBLIC_ABC} {process.env.NEXT_PUBLIC_HOST}{' '}
-        {process.env.NEXT_PUBLIC_PORT} hehe
-      </h1>
       <div className={styles.centerButton}>
         <Button onClick={navigate} label="Add car" param="/car/create" />
       </div>
