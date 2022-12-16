@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 import Button from '../components/Button';
 import { navigate } from '../utils/navigate';
 import styles from './styles.module.css';
+import { centerButton } from './style';
 
 export default function Home({ cars }) {
   return (
@@ -15,7 +16,7 @@ export default function Home({ cars }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <div className={styles.centerButton}>
+      <div style={centerButton}>
         <Button onClick={navigate} label="Add car" param="/car/create" />
       </div>
       <AllCars car={cars} />

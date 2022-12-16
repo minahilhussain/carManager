@@ -1,15 +1,14 @@
-import Link from 'next/link';
 import React from 'react';
-import styles from './Button.module.css';
+import { button } from './styles';
 
 interface ButtonProps {
   label: string;
   onClick: Function;
-  param?: string;
+  param?: any;
 }
 const Button = ({ label, onClick, param }: ButtonProps) => {
   return (
-    <span onClick={() => onClick(param)} className={styles.button}>
+    <span onClick={() => onClick(param)} style={button}>
       {label}
     </span>
   );
