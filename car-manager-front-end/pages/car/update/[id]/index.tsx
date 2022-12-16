@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import { GetStaticPaths } from 'next/types';
 import { useState } from 'react';
 import NavBar from '../../../../components/NavBar';
@@ -12,7 +11,6 @@ import {
   innerwrapperLabel,
   wrapper,
 } from '../../create/style';
-import { button } from '../../../../components/Button/styles';
 import Button from '../../../../components/Button';
 
 export default function Update({ car }: any) {
@@ -24,7 +22,7 @@ export default function Update({ car }: any) {
     <>
       <NavBar />
       <div style={wrapper}>
-        <form style={innerwrapper} method="post">
+        <form style={innerwrapper as React.CSSProperties} method="post">
           <div style={innerwrapperDiv}>
             <label style={innerwrapperLabel} htmlFor="name">
               Name:

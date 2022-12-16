@@ -22,7 +22,7 @@ const Car = () => {
     <>
       <NavBar />
       <div style={wrapper}>
-        <form style={innerwrapper} method="post">
+        <form style={innerwrapper as React.CSSProperties} method="post">
           <div style={innerwrapperDiv}>
             <label style={innerwrapperLabel} htmlFor="name">
               Name:

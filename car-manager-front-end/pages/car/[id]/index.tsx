@@ -13,12 +13,12 @@ const car = ({ car }: carProps) => {
   return (
     <>
       <NavBar />
-      <div style={wrapper}>
+      <div style={wrapper as React.CSSProperties}>
         <div style={innerwrapper}>
           <CarDetail car={car} />
         </div>
         <br />
-        <div style={buttonsContainer}>
+        <div style={buttonsContainer as React.CSSProperties}>
           <Button onClick={navigate} label="Go Back" param={{ link: '/' }} />
           <Button
             onClick={navigate}
