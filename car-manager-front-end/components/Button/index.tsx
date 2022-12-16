@@ -4,7 +4,7 @@ import { button } from './styles';
 interface ButtonProps {
   label: string;
   onClick: Function;
-  param?: any;
+  param?: object;
 }
 const Button = ({ label, onClick, param }: ButtonProps) => {
   return (

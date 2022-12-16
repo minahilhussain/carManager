@@ -1,5 +1,7 @@
-import Router from 'next/router'
-
-export const navigate = (param: string) => {
-  Router.push(param)
+import Router from 'next/router';
+interface navigateLink {
+  link: string;
 }
+export const navigate = (param: navigateLink) => {
+  Router.push(param.link);
+};

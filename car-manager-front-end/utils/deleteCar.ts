@@ -1,8 +1,9 @@
 import Router from 'next/router';
 import swal from 'sweetalert';
+import { Car } from '../types/Car';
 import { navigate } from './navigate';
 
-export const deleteCar = async (uuid: string) => {
+export const deleteCar = async (car: Car) => {
   const willDelete = await swal({
     title: 'Are you sure?',
     text: 'Are you sure want to delete this note?',
@@ -13,7 +14,7 @@ export const deleteCar = async (uuid: string) => {
 
   if (willDelete) {
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_HOST}/car/${uuid}`,
+      `${process.env.NEXT_PUBLIC_HOST}/car/${car.uuid}`,
       {
         method: `DELETE`,
       },
@@ -21,6 +22,6 @@ export const deleteCar = async (uuid: string) => {
     swal('Deleted!', 'Note deleted sucessfully', 'success', {
       className: 'confirmation-button',
     });
-    navigate('/');
+    navigate({ link: '/' });
   }
 };

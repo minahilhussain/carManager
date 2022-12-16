@@ -14,5 +14,5 @@ export const saveCar = async (car: SaveCar) => {
   swal('Saved!', 'car added sucessfully', 'success', {
     className: 'confirmation-button',
   });
-  navigate('/');
+  navigate({ link: '/' });
 };

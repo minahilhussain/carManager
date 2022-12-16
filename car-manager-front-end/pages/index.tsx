@@ -4,7 +4,6 @@ import AllCars from '../components/AllCars';
 import Footer from '../components/Footer';
 import Button from '../components/Button';
 import { navigate } from '../utils/navigate';
-import styles from './styles.module.css';
 import { centerButton } from './style';
 
 export default function Home({ cars }) {
@@ -17,7 +16,11 @@ export default function Home({ cars }) {
       </Head>
       <Header />
       <div style={centerButton}>
-        <Button onClick={navigate} label="Add car" param="/car/create" />
+        <Button
+          onClick={navigate}
+          label="Add car"
+          param={{ link: '/car/create' }}
+        />
       </div>
       <AllCars car={cars} />
       <Footer />
