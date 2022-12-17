@@ -4,9 +4,9 @@ import AllCars from '../components/AllCars';
 import Footer from '../components/Footer';
 import Button from '../components/Button';
 import { navigate } from '../utils/navigate';
-import { centerButton } from './style';
+import { centerButton } from '../styles/styles';
 
-export default function Home({ cars }) {
+export default function Home({ cars }: any) {
   return (
     <div>
       <Head>
