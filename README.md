@@ -2,15 +2,19 @@ This a type script project, which helps the user to manage cars. It's front end 
 
 ## Tech Stack
 
-[Typescript][nodejs][NestJs][postgres][TypeOrm]
-[NextJs][reactjs]
+`Typescript` `Nodejs` `NestJs` `JavaScript` `Postgres` `TypeOrm` `NextJs` `Reactjs`
 
 ## Getting Started
 
 Go to both directories one by one and run
-`yarn`
-this will install necessary packages
-then , run the development server:
+```bash
+npm install
+# or
+yarn
+````
+This will install necessary packages
+Provide information in both environment files 
+Then, run the development server:
 
 ```bash
 npm run start
