@@ -8,6 +8,7 @@ const TextField = ({ id, name, onChange }: any) => {
       id={id}
       name={id}
       value={name}
+      required
       onChange={(e) => onChange(e.target.value)}
       className={styles.inputField}
     />

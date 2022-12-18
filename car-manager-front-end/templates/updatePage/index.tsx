@@ -1,11 +1,12 @@
 import { GetStaticPaths } from 'next/types';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import NavBar from '../../components/NavBar';
 import TextField from '../../components/TextField';
 import Footer from '../../components/Footer';
 import { carProps } from '../../types/Car';
 import { updateCar } from '../../utils/updateCar';
 import {
+  buttonDiv,
   innerwrapper,
   innerwrapperDiv,
   innerwrapperLabel,
@@ -23,19 +24,19 @@ export default function UpdatePage({ car }: carProps) {
       <NavBar />
       <div style={wrapper}>
         <form style={innerwrapper as React.CSSProperties} method="post">
-          <div style={innerwrapperDiv}>
+          <div style={innerwrapperDiv as React.CSSProperties}>
             <label style={innerwrapperLabel} htmlFor="name">
-              Name:
+              Name:{'         '}
             </label>
             <TextField id={'name'} name={name} onChange={setName} />
           </div>
-          <div style={innerwrapperDiv}>
+          <div style={innerwrapperDiv as React.CSSProperties}>
             <label style={innerwrapperLabel} htmlFor="model">
-              Model:
+              Model:{'         '}
             </label>
             <TextField id={'model'} name={model} onChange={setModel} />
           </div>
-          <div style={innerwrapperDiv}>
+          <div style={innerwrapperDiv as React.CSSProperties}>
             <label style={innerwrapperLabel} htmlFor="description">
               Description:
             </label>
@@ -45,17 +46,19 @@ export default function UpdatePage({ car }: carProps) {
               onChange={setDescription}
             />
           </div>
-          <div style={innerwrapperDiv}>
+          <div style={innerwrapperDiv as React.CSSProperties}>
             <label style={innerwrapperLabel} htmlFor="color">
-              Color:{' '}
+              Color:{'          '}
             </label>
             <TextField id={'color'} name={color} onChange={setColor} />
           </div>
-          <Button
-            onClick={updateCar}
-            label="Save"
-            param={{ uuid: car.uuid, name, model, description, color }}
-          />
+          <div style={buttonDiv}>
+            <Button
+              onClick={updateCar}
+              label="Save Car"
+              param={{ uuid: car.uuid, name, model, description, color }}
+            />
+          </div>
         </form>
       </div>
       <Footer />

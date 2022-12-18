@@ -1,10 +1,11 @@
 import Footer from '../../components/Footer';
 import NavBar from '../../components/NavBar';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { saveCar } from '../../utils/saveCar';
 import TextField from '../../components/TextField';
 import Button from '../../components/Button';
 import {
+  buttonDiv,
   innerwrapper,
   innerwrapperDiv,
   innerwrapperLabel,
@@ -22,19 +23,19 @@ const CreatePage = () => {
       <NavBar />
       <div style={wrapper}>
         <form style={innerwrapper as React.CSSProperties} method="post">
-          <div style={innerwrapperDiv}>
+          <div style={innerwrapperDiv as React.CSSProperties}>
             <label style={innerwrapperLabel} htmlFor="name">
-              Name:
+              Name:{'         '}
             </label>
             <TextField id={'name'} name={name} onChange={setName} />
           </div>
-          <div style={innerwrapperDiv}>
+          <div style={innerwrapperDiv as React.CSSProperties}>
             <label style={innerwrapperLabel} htmlFor="model">
-              Model:
+              Model:{'         '}
             </label>
             <TextField id={'model'} name={model} onChange={setModel} />
           </div>
-          <div style={innerwrapperDiv}>
+          <div style={innerwrapperDiv as React.CSSProperties}>
             <label style={innerwrapperLabel} htmlFor="description">
               Description:
             </label>
@@ -44,17 +45,19 @@ const CreatePage = () => {
               onChange={setDescription}
             />
           </div>
-          <div style={innerwrapperDiv}>
+          <div style={innerwrapperDiv as React.CSSProperties}>
             <label style={innerwrapperLabel} htmlFor="color">
-              Color:{' '}
+              Color:{'          '}
             </label>
             <TextField id={'color'} name={color} onChange={setColor} />
           </div>
-          <Button
-            onClick={saveCar}
-            label="Save"
-            param={{ name, model, description, color }}
-          />
+          <div style={buttonDiv}>
+            <Button
+              onClick={saveCar}
+              label="Save Car"
+              param={{ name, model, description, color }}
+            />
+          </div>
         </form>
       </div>
       <Footer />

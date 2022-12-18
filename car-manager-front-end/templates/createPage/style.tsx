@@ -26,4 +26,8 @@ export const innerwrapperLabel = {
 };
 export const innerwrapperDiv = {
   margin: '10px',
+  whiteSpace: 'pre-wrap',
+};
+export const buttonDiv = {
+  margin: '1rem auto',
 };
