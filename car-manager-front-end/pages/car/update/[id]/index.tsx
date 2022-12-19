@@ -1,8 +1,8 @@
 import { GetStaticPaths } from 'next/types';
-import { Car } from '../../../../types/Car';
+import { Car, carProps } from '../../../../types/Car';
 import UpdatePage from '../../../../templates/updatePage';
 
-export default function Update({ car }: any) {
+export default function Update({ car }: carProps) {
   return (
     <>
       <UpdatePage car={car} />

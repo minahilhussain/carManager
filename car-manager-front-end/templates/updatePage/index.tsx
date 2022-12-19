@@ -1,4 +1,3 @@
-import { GetStaticPaths } from 'next/types';
 import React, { useState } from 'react';
 import NavBar from '../../components/NavBar';
 import TextField from '../../components/TextField';
